@@ -4,6 +4,8 @@ goog.addDependency("../react.inc.js", ['cljsjs.react'], []);
 goog.addDependency("../react-dom.inc.js", ['cljsjs.react.dom'], ['cljsjs.react']);
 goog.addDependency("../om/util.js", ['om.util'], ['cljs.core']);
 goog.addDependency("../om/dom.js", ['om.dom'], ['cljs.core', 'goog.object', 'cljsjs.react', 'cljsjs.react.dom', 'om.util']);
+goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
+goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);
 goog.addDependency("../om/next/cache.js", ['om.next.cache'], ['cljs.core']);
 goog.addDependency("../clojure/zip.js", ['clojure.zip'], ['cljs.core']);
 goog.addDependency("../om/next/impl/parser.js", ['om.next.impl.parser'], ['cljs.core', 'om.util']);
@@ -23,7 +25,7 @@ goog.addDependency("../com/cognitect/transit.js", ['com.cognitect.transit'], ['c
 goog.addDependency("../cognitect/transit.js", ['cognitect.transit'], ['com.cognitect.transit.eq', 'cljs.core', 'com.cognitect.transit.types', 'com.cognitect.transit', 'goog.math.Long']);
 goog.addDependency("../om/transit.js", ['om.transit'], ['cljs.core', 'cognitect.transit', 'om.tempid', 'com.cognitect.transit']);
 goog.addDependency("../om/next.js", ['om.next'], ['om.next.cache', 'clojure.zip', 'om.next.impl.parser', 'goog.string', 'goog.debug.Console', 'cljs.core', 'goog.object', 'goog.log', 'om.next.protocols', 'om.tempid', 'clojure.walk', 'om.transit', 'om.util']);
-goog.addDependency("../om_tutorial/core.js", ['om_tutorial.core'], ['goog.dom', 'cljs.core', 'om.dom', 'om.next']);
+goog.addDependency("../om_tutorial/core.js", ['om_tutorial.core'], ['goog.dom', 'cljs.core', 'om.dom', 'cljs.pprint', 'om.next']);
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
 goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core', 'cljs.core.async.impl.buffers', 'goog.async.nextTick']);
@@ -32,7 +34,6 @@ goog.addDependency("../cljs/core/async/impl/ioc_helpers.js", ['cljs.core.async.i
 goog.addDependency("../cljs/core/async/impl/timers.js", ['cljs.core.async.impl.timers'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async.js", ['cljs.core.async'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.buffers', 'cljs.core.async.impl.protocols', 'cljs.core.async.impl.ioc_helpers', 'cljs.core.async.impl.timers']);
 goog.addDependency("../clojure/set.js", ['clojure.set'], ['cljs.core']);
-goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
 goog.addDependency("../figwheel/client/utils.js", ['figwheel.client.utils'], ['cljs.core', 'clojure.string']);
 goog.addDependency("../figwheel/client/file_reloading.js", ['figwheel.client.file_reloading'], ['goog.string', 'goog.net.jsloader', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'clojure.set', 'figwheel.client.utils', 'clojure.string']);
 goog.addDependency("../cljs/repl.js", ['cljs.repl'], ['cljs.core']);

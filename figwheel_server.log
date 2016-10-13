@@ -1,0 +1,243 @@
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  resources/public/js/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs_deps.js
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.266 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.188 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.198 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+WARNING: Use of undeclared Var om-tutorial.core/render at line 40 /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.222 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.193 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.194 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.188 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.193 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.2 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.182 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+WARNING: Wrong number of args (3) passed to om.next/factory at line 30 /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.208 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+[31mCompiling "resources/public/js/main.js" failed.
+[0mERROR: Map literal must contain an even number of forms on file /home/paul/projects/test/src/om_tutorial/core.cljs, line 30, column 37
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.105 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.193 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.191 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.185 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.188 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.189 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.191 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.183 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /home/paul/projects/test/src/om_tutorial/core.cljs
+[31mCompiling "resources/public/js/main.js" failed.
+[0mANALYSIS ERROR: No such namespace: clojure.pprint, could not locate clojure/pprint.cljs, clojure/pprint.cljc, or Closure namespace "clojure.pprint" on file null, line null, column null
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.074 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  resources/public/js/cljs_deps.js
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.189 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.191 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.189 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.194 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.2 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.188 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.192 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.191 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.19 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.202 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.192 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.196 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.197 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.201 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.191 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.191 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.2 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.195 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.192 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.186 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+WARNING: state at line 9 is being replaced at line 28 src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.256 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+WARNING: state at line 9 is being replaced at line 28 src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.299 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+WARNING: state at line 9 is being replaced at line 28 src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.305 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.239 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.261 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.247 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/om_tutorial/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/om_tutorial/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.255 seconds.[0m
