@@ -4,6 +4,8 @@
             [om.dom :as dom]
             [om-tutorial.client :as t]))
 
+;;TODO: Remove om-tutorial.client from master. It only belongs on the toolkit branch.
+
 (def app-state
   (atom
     {:app/title "Animals"
