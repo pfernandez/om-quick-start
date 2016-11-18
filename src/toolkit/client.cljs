@@ -1,4 +1,4 @@
-(ns om-tutorial.client
+(ns toolkit.client
   (:require [om.next :as om]
             [clojure.string :as s]))
 

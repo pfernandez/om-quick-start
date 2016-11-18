@@ -5,4 +5,4 @@
 .lein-repl-history
 /target/
 out/
-js/main.js
+/resources/public/js/main.js

@@ -1,8 +1,8 @@
-(ns om-tutorial.core
+(ns toolkit.core
   (:require [goog.dom :as gdom]
             [om.next :as om :refer-macros [defui]]
             [om.dom :as dom]
-            [om-tutorial.client :as t]))
+            [toolkit.client :as tc]))
 
 (def app-state
   (atom
@@ -12,7 +12,7 @@
       [6 "Lion"] [7 "Mouse"] [8 "Monkey"] [9 "Snake"] [10 "Zebra"]]
      :counter 0}))
 
-(defmethod t/read :animals/list
+(defmethod tc/read :animals/list
   [{:keys [state] :as env} key {:keys [start end]}]
   {:value (subvec (:animals/list @state) start end)})
 
@@ -26,7 +26,8 @@
       :counter])
   Object
   (render [this]
-    (let [{:keys [app/title animals/list counter]} (om/props this)]
+    (let [{:keys [app/title animals/list counter]} (om/props this)
+          inc-count #(tc/set-in! this :counter (inc counter))]
       (dom/div nil
         (dom/h2 nil title)
         (apply dom/ul nil
@@ -34,13 +35,13 @@
             (fn [[i name]]
               (dom/li nil (str i ". " name)))
             list))
-        (dom/h3 nil "Counter:")
-        (dom/div nil counter)))))
+        (dom/h3 nil "Count: " counter)
+        (dom/button #js {:onClick inc-count} "+")))))
 
 (def reconciler
   (om/reconciler
     {:state app-state
-     :parser t/parser}))
+     :parser tc/parser}))
 
 (om/add-root! reconciler
   AnimalsList (gdom/getElement "app"))
