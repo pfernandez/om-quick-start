@@ -1,4 +1,4 @@
-(defproject om-tutorial "0.1.0-SNAPSHOT"
+(defproject om-quick-start "0.1.0-SNAPSHOT"
 
   :description "A Launchpad for Om Next experiments."
 
@@ -13,7 +13,7 @@
   :cljsbuild {:builds [{:id "dev"
                         :figwheel true
                         :source-paths ["src"]
-                        :compiler {:main om-tutorial.core
+                        :compiler {:main om-quick-start.core
                                    :asset-path "js/out"
                                    :output-to "resources/public/js/main.js"
                                    :output-dir "resources/public/js/out"
