@@ -2,6 +2,7 @@
   (:require [om.next :as om]
             [clojure.string :as s]))
 
+(enable-console-print!)
 
 (defmulti read om/dispatch)
 (defmulti mutate om/dispatch)
@@ -16,12 +17,54 @@
 ;; Read
 
 (defmethod read :default
-  [{:keys [state] :as env} key params]
-  (let [st @state]
-    (if-let [[_ value] (find st key)]
-      {:value value}
-      {:value :not-found})))
+  [{:keys [query state ast]} k params]
+  (let [st @state
+        data (get st k)
+        value (if query (om/db->tree query data st) data)
+        remote (update-in ast [:query] #(into [] (remove om.util/ident?) %))]
 
+    (print
+      "-- read ---------------------------"
+      "\nquery:" query
+      "\nstate:" @state
+      "\nast:" ast
+      "\nkey" k
+      "\nparams" params
+      "\nvalue" value
+      "\nremote" remote
+      "\n-----------------------------------")
+
+    {:value value
+     :remote remote}))
+
+#_(defmethod read :default
+    [{:keys [state] :as env} key params]
+    (let [st @state]
+      (if-let [[_ value] (find st key)]
+        {:value value}
+        {:value :not-found})))
+
+#_(defn read-local
+    "Read function for the Om parser.
+
+  *** NOTE: This function only runs when it is called without a target -- it is not triggered for remote reads. To
+  trigger a remote read, use the `untangled/data-fetch` namespace. ***
+
+  Returns the current locale when reading the :ui/locale keyword. Otherwise pulls data out of the app-state.
+  "
+    [{:keys [query target state ast]} dkey _]
+    (when (not target)
+      (case dkey
+        (let [top-level-prop (nil? query)
+              key (or (:key ast) dkey)
+              by-ident? (util/ident? key)
+              union? (map? query)
+              data (if by-ident? (get-in @state key) (get @state key))]
+          {:value
+           (cond
+             union? (get (om/db->tree [{key query}] @state @state) key)
+             top-level-prop data
+             :else (om/db->tree query data @state))}))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mutate
@@ -34,33 +77,27 @@
     (apply merge-with deep-merge xs)
     (last xs)))
 
-;; TODO: Collapse into a single `swap!`.
-(defn merge-state!
-  "Performs a `deep-merge` of `data` and `tables` into `state` at `ref`."
-  ([state data tables]
-   (merge-state! state data tables nil))
-  ([state data tables ref]
-   (if ref
-     (swap! state update-in ref deep-merge data)
-     (swap! state deep-merge data))
-   (swap! state deep-merge tables)))
-
-(defn normalize
-  [state component props ref]
-  (let [data (om/tree->db component props)]
-    [data (meta data)]))
+(defn merge-state [state data ref]
+  (as-> state st
+    (if ref
+      (update-in st ref deep-merge data)
+      (deep-merge st data))
+    (deep-merge st (meta data))))
 
 (defn normalize-into-state!
+  "Normalizes `props`, then performs a `deep-merge`
+  of the result into `state` at `ref`."
   [state component props ref]
-  (let [[data tables] (normalize state component props ref)]
-    (merge-state! state data tables ref)))
+  (swap! state merge-state (om/tree->db component props) ref))
 
 (defmethod mutate 'tx/set
   [{:keys [state component ref ast]} _ {:keys [props remote]}]
   {:action #(normalize-into-state! state component props ref)
    :remote (when remote
              (let [entity-id (:db/id props)
-                   remote-params (if entity-id (assoc props :db/id (last ref)) props)]
+                   remote-params (if entity-id
+                                   (assoc props :db/id (last ref))
+                                   props)]
                (assoc ast :params remote-params)))})
 
 (defmethod mutate 'tx/add
@@ -77,12 +114,12 @@
   [{:keys [state component ref ast]} _ {:keys [path ref-id remote]}]
   (let [keywd (last path)]
     {:action #(let [full-path (concat ref path)]
-               (if (> (count full-path) 1)
-                 (if ref-id (let [list (keywd (om/props component))
-                                  item-idx (.indexOf (mapv :db/id list) ref-id)]
-                              (swap! state update-in full-path vec-remove item-idx))
-                            (swap! state update-in (drop-last full-path) dissoc keywd))
-                 (swap! state dissoc keywd)))
+                (if (> (count full-path) 1)
+                  (if ref-id (let [list (keywd (om/props component))
+                                   item-idx (.indexOf (mapv :db/id list) ref-id)]
+                               (swap! state update-in full-path vec-remove item-idx))
+                      (swap! state update-in (drop-last full-path) dissoc keywd))
+                  (swap! state dissoc keywd)))
      :remote (when remote
                (merge ast {:params {:db/id      (or (:db/id (om/props component)) (last ref))
                                     (last path) (when ref-id #{ref-id})}
@@ -364,24 +401,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Experiments below!
 
-; (defn class->keyword [Class]
-;   (let [str-array (s/split (.-name Class) "$")
-;         ns-path (s/join "." (pop str-array))
-;         class-name (last str-array)
-;         full-name (s/join "/" [ns-path class-name])]
-;     (keyword full-name)))
+                                        ; (defn class->keyword [Class]
+                                        ;   (let [str-array (s/split (.-name Class) "$")
+                                        ;         ns-path (s/join "." (pop str-array))
+                                        ;         class-name (last str-array)
+                                        ;         full-name (s/join "/" [ns-path class-name])]
+                                        ;     (keyword full-name)))
 
-; (defn render-child [parent Child & [queried-props computed-props validator]]
-;   (let [query (om/get-query Child)
-;         state-key (class->keyword Child)
-;         parent-component (get-component parent)]
+                                        ; (defn render-child [parent Child & [queried-props computed-props validator]]
+                                        ;   (let [query (om/get-query Child)
+                                        ;         state-key (class->keyword Child)
+                                        ;         parent-component (get-component parent)]
 
-;     (js/console.log parent-component)
-;     (js/console.log state-key query queried-props)
+                                        ;     (js/console.log parent-component)
+                                        ;     (js/console.log state-key query queried-props)
 
-;     #_(om/update-query! parent-component #(update % :query conj {state-key query})) ; causes error
+                                        ;     #_(om/update-query! parent-component #(update % :query conj {state-key query})) ; causes error
 
-;     (js/console.log (om/get-query parent-component))
+                                        ;     (js/console.log (om/get-query parent-component))
 
-;     ((om/factory Child {:validator validator :keyfn :id})
-;     (om/computed queried-props computed-props))))
+                                        ;     ((om/factory Child {:validator validator :keyfn :id})
+                                        ;     (om/computed queried-props computed-props))))

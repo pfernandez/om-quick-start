@@ -4,17 +4,13 @@
             [om.dom :as dom]
             [toolkit.client :as tc]))
 
-(def app-state
+(defonce app-state
   (atom
     {:app/title "Animals"
      :animals/list
      [[1 "Ant"] [2 "Antelope"] [3 "Bird"] [4 "Cat"] [5 "Dog"]
       [6 "Lion"] [7 "Mouse"] [8 "Monkey"] [9 "Snake"] [10 "Zebra"]]
      :counter 0}))
-
-(defmethod tc/read :animals/list
-  [{:keys [state] :as env} key {:keys [start end]}]
-  {:value (subvec (:animals/list @state) start end)})
 
 (defui AnimalsList
   static om/IQueryParams
