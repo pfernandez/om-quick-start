@@ -12,7 +12,7 @@
 
   :cljsbuild {:builds [{:id "dev"
                         :figwheel true
-                        :source-paths ["src"]
+                        :source-paths ["src" "spec"]
                         :compiler {:main toolkit.core
                                    :asset-path "js/out"
                                    :output-to "resources/public/js/main.js"
