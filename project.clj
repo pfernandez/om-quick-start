@@ -7,17 +7,18 @@
                  [org.omcljs/om "1.0.0-alpha47"]]
 
   :profiles {:dev {:dependencies [[com.cemerick/piggieback "0.2.1"]
-                                  [figwheel-sidecar "0.5.8" :scope "test"]]
+                                  [figwheel-sidecar "0.5.8" :scope "test"]
+                                  [org.clojure/test.check "0.9.0" :scope "test"]]
                    :source-paths ["dev"]}}
 
   :cljsbuild {:builds [{:id "dev"
                         :figwheel true
-                        :source-paths ["src" "spec"]
+                        :source-paths ["src" "dev"]
                         :compiler {:main toolkit.core
                                    :asset-path "js/out"
                                    :output-to "resources/public/js/main.js"
                                    :output-dir "resources/public/js/out"
-                                   :verbose true
+                                   ;;:verbose true
                                    :optimizations :none
                                    :source-map true}}]}
 
