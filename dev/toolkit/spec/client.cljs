@@ -32,6 +32,10 @@
 ;     :req [:db/id]
 ;     :opt [::entity ::data-index ::data-table]))
 
+:db {}
+#:things {:db/id 123
+          :name "asdf"}
+
 (s/def ::snake-optionally-eating-its-own-tail
   (s/keys :opt [::snake-optionally-eating-its-own-tail]))
 

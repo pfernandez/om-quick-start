@@ -4,7 +4,15 @@
 
   :dependencies [[org.clojure/clojure "1.9.0-alpha14"]
                  [org.clojure/clojurescript "1.9.293"]
-                 [org.omcljs/om "1.0.0-alpha47"]]
+                 [org.omcljs/om "1.0.0-alpha47"]
+                 [ring/ring "1.5.0"]
+                 [bidi "2.0.14"]
+                 [com.cognitect/transit-clj "0.8.295"]
+                 [com.cognitect/transit-cljs "0.8.239"]
+                 [com.stuartsierra/component "0.3.1"]
+                 [org.postgresql/postgresql "9.4.1208.jre7"]
+                 [com.layerware/hugsql "0.4.7"]
+                 [com.taoensso/timbre "4.7.4"]]
 
   :profiles {:dev {:dependencies [[com.cemerick/piggieback "0.2.1"]
                                   [figwheel-sidecar "0.5.8" :scope "test"]
@@ -18,7 +26,6 @@
                                    :asset-path "js/out"
                                    :output-to "resources/public/js/main.js"
                                    :output-dir "resources/public/js/out"
-                                   ;;:verbose true
                                    :optimizations :none
                                    :source-map true}}]}
 
